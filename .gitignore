@@ -1,0 +1,11 @@
+/x64/*
+Debug/*
+/Debug/
+/src/*
+/cw/*
+/header/
+cw.vcxproj.*
+cw.vcxproj
+ReadMe.txt
+*.vcxproj.*
+*.vcxproj.
