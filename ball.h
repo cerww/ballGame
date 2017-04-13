@@ -1,11 +1,23 @@
 #pragma once
 #include "cw\drawableObj.h"
 
-class ball :public drawableObj{
+class ball {
 public:
-	ball(glm::vec2 cooords, texture& t) :drawableObj({ cooords.x,cooords.y,15,15 }, t, {130,140,200,255}) {
+	ball(const glm::vec2 cooords,const texture& t):pos(cooords),m_t(t) {
 		
 	};
-	float angle = 0.0f;
-	void update();
+
+	void changeAngle(float newAngle);
+	void draw(drawRenderer&);
+	//void update();
+	float angle;
+	glm::vec2 pos;
+	void move() { pos += m_unitVec; };
+	friend class gameMap;
+private:
+	glm::vec2 m_unitVec;
+	const texture& m_t;
 };
+
+
+
