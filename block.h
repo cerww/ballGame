@@ -4,7 +4,7 @@
 class block{ 
 public:
 	block() = default;
-	void draw(drawRenderer&);
+	void draw(drawRenderer&)const;
 	glm::ivec2 m_pos;
 	int m_current = 0;
 private:
