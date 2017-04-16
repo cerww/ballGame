@@ -9,12 +9,15 @@ public:
 		
 	};
 
-	void changeAngle(float newAngle);
+	//ball operator=(const ball&) = default;
+
+	void changeAngle(double newAngle);
 	void draw(drawRenderer&)const;
 	//void update();
-	math::radians angle;
+	//math::radians angle;
+	float angle;
 	glm::vec2 pos;
-	void move() { pos += m_unitVec; };
+	void move() { pos += 6.0f*m_unitVec; };
 	friend class gameMap;
 	glm::vec2 m_unitVec;
 private:

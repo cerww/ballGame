@@ -2,14 +2,21 @@
 #include <vector>
 #include "block.h"
 #include "ball.h"
+#include "cw/imgLoader.h"
+
 class gameMap {
 public:
-	gameMap() = default;
-	void update();
+	gameMap() {
+		m_ballText = imgLoader::loadPNG("circle.png");
+
+		//m_blockText = imgLoader::loadPNG();
+	};
+	bool update();
 	void draw(drawRenderer& r);
-	void addBall(float angle,glm::vec2 p);
-private:
+	void addBall(double angle,glm::vec2 p);
 	void nextLayer();
+private:
+
 	std::vector<ball> m_balls;
 	std::vector<block> m_blocks;
 
