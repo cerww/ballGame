@@ -2,7 +2,7 @@
 #include "cw\drawableObj.h"
 #include "cw\things.h"
 
-class ball {
+class ball {//r = 7.5
 public:
 	ball() = default;
 	ball(const glm::vec2 cooords,const texture& t):pos(cooords),m_t(t) {
